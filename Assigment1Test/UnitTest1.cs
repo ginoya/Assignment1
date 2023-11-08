@@ -8,23 +8,22 @@ namespace Assigment1Test
         [Fact]
         public void LengthIs4()
         {
-            Assert.Equal(4, LengthHelper.findLength("sdga"));
+            Assert.Equal(3, LengthHelper.findLength("123"));
         }
 
         [Fact]
         public void LengthIs0()
         {
-            Assert.Equal(0, LengthHelper.findLength(""));
+            Assert.Equal(12, LengthHelper.findLength("123456789010"));
         }
 
         [Theory]
-        [InlineData("1123")]
-        [InlineData("asdf")]
+        [InlineData("")]
         [InlineData(null)]
 
-        public void LengthTheory(string inputStr)
+        public void LengthTheoryToReturn0(string inputStr)
         {
-            Assert.Equal(4,LengthHelper.findLength(inputStr));
+            Assert.Equal(0,LengthHelper.findLength(inputStr));
         }
     }
 }
